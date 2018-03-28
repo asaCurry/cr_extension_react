@@ -7,7 +7,7 @@ const Navigation = props =>
 
       <li key={index}
         className={(item.isActive ? 'nav-select' : '')}
-        onClick={(index) => this.handleNavClick(index)}
+        onClick={() => props.handleNavClick(index)}
         >
         <a>{item.name}</a>
       </li>

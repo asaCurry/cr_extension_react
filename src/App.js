@@ -38,11 +38,16 @@ class App extends Component {
 
   handleNavClick = indexToChange =>
     this.setState({
-      navitems: this.state.navItems.map((item, index) => {
+      navItems: this.state.navItems.map((item, index) => {
         if (index === indexToChange) {
           return {
             ...item,
             isActive: true
+          };
+        } else {
+          return {
+            ...item,
+            isActive: false
           };
         }
         return item;
