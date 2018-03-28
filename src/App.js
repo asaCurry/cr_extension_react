@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navigation from './navigation';
-import GuestList from './guestlist';
 
 
 
@@ -37,12 +36,29 @@ class App extends Component {
     ]
   }
 
+  handleNavClick = indexToChange =>
+    this.setState({
+      navitems: this.state.navItems.map((item, index) => {
+        if (index === indexToChange) {
+          return {
+            ...item,
+            isActive: true
+          };
+        }
+        return item;
+      })
+    });
+
+
   render() {
     return (
       <div class="App">
-        <Navigation
-          className="nav-wrapper"
-          navItems={this.state.navItems} />
+        <div className="nav-wrapper">
+          <Navigation
+            className="nav-wrapper"
+            handleNavClick={this.handleNavClick.bind(this)}
+            navItems={this.state.navItems} />
+        </div>
       </div>
     );
   }

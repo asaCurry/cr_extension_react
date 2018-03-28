@@ -24,10 +24,33 @@
 }
 /* navigation styles */
 
-.side-nav {
+.nav-wrapper {
+  color: lightgray;
+  display: flex;
+  flex-direction: column;
+}
+.nav-wrapper ul {
   color: lightgray;
 }
-
+.nav-wrapper li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid white;
+  background-color: #000;
+  text-align: center;
+  list-style-type: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 120px;
+  height: 40px;
+}
+.nav-select {
+  border-left: 4px solid #ffc728;
+}
+.nav-wrapper a {
+  color: #fff;
+}
 /* animations */
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
