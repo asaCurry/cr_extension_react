@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const Navigation = props =>
   <ul>
      {props.navItems.map((item, index) =>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navigation from './navigation';
+import MainContent from './MainContent';
 
 
 
@@ -23,6 +24,10 @@ class App extends Component {
       },
       {
         name: 'Sales Process',
+        subContent: {
+          currentSub:'Step 1',
+          subContentOptions:["Step 1","Step 2","Step 3","Step 4"]
+        },
         isActive: false
       },
       {
@@ -58,11 +63,20 @@ class App extends Component {
   render() {
     return (
       <div class="App">
-        <div className="nav-wrapper">
-          <Navigation
-            className="nav-wrapper"
-            handleNavClick={this.handleNavClick.bind(this)}
-            navItems={this.state.navItems} />
+        <div class="app-wrapper">
+          <div className="nav-wrapper">
+            <Navigation
+              role="navigation"
+              className="nav-wrapper"
+              handleNavClick={this.handleNavClick.bind(this)}
+              navItems={this.state.navItems} />
+          </div>
+          <div class="content-wrapper">
+            <MainContent
+              className="main-content"
+              navItems={this.state.navItems}
+              />
+          </div>
         </div>
       </div>
     );

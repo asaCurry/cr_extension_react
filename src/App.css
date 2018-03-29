@@ -1,7 +1,22 @@
+/* type styles */
+
+p {
+  margin: 0;
+}
+
+/* end typestyles */
+
 .App {
   text-align: center;
   width: 800px;
-  height: 600px;
+  height: 400px;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 1fr;
+  min-height: 400px;
 }
 
 .App-logo {
@@ -22,16 +37,26 @@
 .App-intro {
   font-size: large;
 }
+
 /* navigation styles */
 
 .nav-wrapper {
   color: lightgray;
   display: flex;
   flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
+
 .nav-wrapper ul {
   color: lightgray;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin: 0;
 }
+
 .nav-wrapper li {
   display: flex;
   justify-content: center;
@@ -42,17 +67,69 @@
   list-style-type: none;
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 120px;
-  height: 40px;
+  flex-grow: 1;
+  border-left: 4px solid #000;
 }
+
 .nav-select {
-  border-left: 4px solid #ffc728;
+  border-left: 4px solid #ffc728 !important;
 }
+
 .nav-wrapper a {
   color: #fff;
 }
+
+/* main content */
+
+.content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.main-content {
+  background-color: grey;
+}
+
+/* selector */
+
+.contentSelector {}
+
+.subheader-selector {
+  text-align: left;
+  padding: 0 0 16px 0;
+}
+
+/* recent campaigns */
+
+.main-content-inner {
+  display: flex;
+}
+
+.content-container {
+  flex-grow: 1;
+  margin: 1.5%;
+}
+
+.contentItem {
+  background-color: #fff;
+  margin: 8px 0 8px 0;
+  padding: 8px;
+  box-shadow: 5px 5px 5px rgba(155, 155, 155, .6);
+}
+
+.recentCampaigns {}
+
+.resources {}
+
 /* animations */
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
