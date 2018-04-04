@@ -8,7 +8,7 @@ const Navigation = props =>
 
       <li key={index}
         className={(item.isActive ? 'nav-select' : '')}
-        onClick={() => props.handleNavClick(index)}
+        onClick={() => props.handleNavClick(index) }
         >
         <a>{item.name}</a>
       </li>
@@ -17,7 +17,8 @@ const Navigation = props =>
 
   Navigation.propTypes = {
     navItems: PropTypes.array.isRequired,
-    handleNavClick: PropTypes.func.isRequired
+    handleNavClick: PropTypes.func.isRequired,
+    handleCurrentIndex: PropTypes.func.isRequired
   }
 
   export default Navigation

@@ -15,12 +15,13 @@ class DropdownPage extends React.Component {
   }
   render() {
     return (<Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-      <DropdownToggle caret="caret" color="primary">
-        Material dropdown
+      <DropdownToggle caret="caret" color="amber">
+        Deal Stage
       </DropdownToggle>
       <DropdownMenu>
         {
-          this.props.subItems.map((subItem, index) => <DropdownItem key={index}>
+          this.props.subItems.map((subItem, index) =>
+          <DropdownItem key={index} color="black">
             {subItem}
           </DropdownItem>)
         }

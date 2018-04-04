@@ -1,64 +1,56 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ContentSelector from './contentSelector';
-import DropdownPage from './contentSelectorMB'
+import DropdownPage from './contentSelectorMB';
 
-const MainContent = props =>
+import QuickLinks from './Content/QuickLinks';
+import Resources from './Content/Resources';
+import Campaigns from './Content/Campaigns';
+import EmployeeResources from './Content/EmployeeResources';
+import SalesProcess from './Content/SalesProcess';
+import Wingbats from './Content/Wingbats';
 
-<div className="mainContentWrapper">
-  <div className="subheader-selector">
-    {props.navItems
-      .filter(item => item.isActive )
-      .map((item, index) => {
+export default class MainContent extends Component {
 
-        if (item.subContent !== undefined) {
-
-          return (
-              // <ContentSelector subItems={item.subContent.subContentOptions}/>
-              <DropdownPage subItems={item.subContent.subContentOptions}/>
-          );
-        } else {
-          return (
-            <h2 key={index}>{item.name}</h2>
-          )
-        }
-      }
-    )}
-    </div>
-  <div className="main-content-inner">
-    <div className="content-container recentCampaigns">
-      <div className="contentItem">
-        <h3>Example Campaign</h3>
-        <p>A brief description of the example campaign.</p>
-      </div>
-      <div className="contentItem">
-        <h3>Example Campaign</h3>
-        <p>A brief description of the example campaign.</p>
-      </div>
-      <div className="contentItem">
-        <h3>Example Campaign</h3>
-        <p>A brief description of the example campaign.</p>
-      </div>
-    </div>
-    <div className="content-container resources">
-      <div className="contentItem">
-        <h3>Example Campaign</h3>
-        <p>A brief description of the example campaign.</p>
-      </div>
-      <div className="contentItem">
-        <h3>Example Campaign</h3>
-        <p>A brief description of the example campaign.</p>
-      </div>
-      <div className="contentItem">
-        <h3>Example Campaign</h3>
-        <p>A brief description of the example campaign.</p>
-      </div>
-    </div>
-  </div>
-</div>;
+constructor(props) {
+    super(props);
+  this.ContentToLoad =  this.props.navItems[this.props.currentIndex].route ;
 
   MainContent.propTypes = {
     navItems: PropTypes.array.isRequired,
+    currentIndex: PropTypes.number.isRequired,
+    salesProcessIndex: PropTypes.number.isRequired
   }
 
-  export default MainContent
+}
+
+
+render(){
+    const RenderMe = this.props.navItems[this.props.currentIndex].route;
+
+    return (
+      <div className="mainContentWrapper">
+        <div className="subheader-selector">
+          {this.props.navItems
+            .filter(item => item.isActive )
+            .map((item, index) => {
+
+              if (item.subContent !== undefined) {
+
+                return (
+                    // <ContentSelector subItems={item.subContent.subContentOptions}/>
+                    <DropdownPage subItems={item.subContent.subContentOptions}/>
+                );
+              } else {
+                return (
+                  <h2 key={index}>{item.name}</h2>
+                )
+              }
+            }
+          )}
+        </div>
+        <RenderMe navItems={this.props.navItems} salesProcessIndex={this.props.salesProcessIndex}/>
+      </div>
+    );
+  }
+}
