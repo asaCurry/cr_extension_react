@@ -14,7 +14,6 @@ export default class MainContent extends Component {
 
 constructor(props) {
     super(props);
-  this.ContentToLoad =  this.props.navItems[this.props.currentIndex].route ;
 
   MainContent.propTypes = {
     navItems: PropTypes.array.isRequired,
