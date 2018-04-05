@@ -18,7 +18,8 @@ constructor(props) {
   MainContent.propTypes = {
     navItems: PropTypes.array.isRequired,
     currentIndex: PropTypes.number.isRequired,
-    salesProcessIndex: PropTypes.number.isRequired
+    salesProcessIndex: PropTypes.number.isRequired,
+    handleSubNavClick: PropTypes.func.isRequired
   }
 
 }
@@ -38,7 +39,11 @@ render(){
 
                 return (
                     // <ContentSelector subItems={item.subContent.subContentOptions}/>
-                    <DropdownPage subItems={item.subContent.subContentOptions}/>
+                    <DropdownPage
+                      subItems={item.subContent.subContentOptions}
+                      handleSubNavClick={this.props.handleSubNavClick}
+                      salesProcessIndex={this.props.salesProcessIndex}
+                      />
                 );
               } else {
                 return (

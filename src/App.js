@@ -36,7 +36,7 @@ class App extends Component {
         name: 'Sales Process',
         route: SalesProcess,
         subContent: {
-          subContentOptions:["Step 1","Step 2","Step 3","Step 4"]
+          subContentOptions:['Discover','NBM','TDD', 'BVA', 'Go / No-Go', 'POC', 'Close' ]
         },
         isActive: false
       },
@@ -46,7 +46,7 @@ class App extends Component {
         isActive: false
       },
       {
-        name: 'Wingbats',
+        name: 'Dingbats',
         route: Wingbats,
         isActive: false
       }
@@ -72,6 +72,9 @@ class App extends Component {
       })
     });
 
+handleSubNavClick = newSubIndex =>
+  this.setState({salesProcessIndex: newSubIndex });
+
   render() {
     return (
       <div className="App">
@@ -90,6 +93,7 @@ class App extends Component {
               navItems={this.state.navItems}
               currentIndex={this.state.currentIndex}
               salesProcessIndex={this.state.salesProcessIndex}
+              handleSubNavClick={this.handleSubNavClick}
               />
           </div>
         </div>

@@ -60,8 +60,8 @@ export default class Resources extends Component {
   }
     render () {
       var competitiveStyle = {
-        width: '80px',
-        marginBottom: '8px'
+        marginBottom: '8px',
+        maxHeight: '30px'
       }
       return (
         <div className="main-content-inner">
@@ -100,7 +100,7 @@ export default class Resources extends Component {
                     </a>
                     <a href={content.href} target="_blank" >
                       <div className="vertical contentItem back">
-                        <img src={content.imgSource} />
+                        <img src={content.imgSource} style={competitiveStyle}/>
                       </div>
                     </a>
                   </div>

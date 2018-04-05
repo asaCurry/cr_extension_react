@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+import Discovery from './ProcessSteps/Discovery';
 import NewBusinessMeeting from './ProcessSteps/NewBusinessMeeting';
+import TechnicalDeepDive from './ProcessSteps/TechnicalDeepDive';
+import BusinessValueAssessment from './ProcessSteps/BusinessValueAssessment';
+import GoNoGo from './ProcessSteps/GoNoGo';
+import ProofOfConcept from './ProcessSteps/ProofOfConcept';
+import Close from './ProcessSteps/Close';
+
 export default class SalesProcess extends Component {
 
   constructor(props) {
@@ -8,13 +16,25 @@ export default class SalesProcess extends Component {
     this.state = {
       subContentRoutes: [
         {
+          subRoute: Discovery
+        },
+        {
           subRoute: NewBusinessMeeting
         },
         {
-          header:'My Leads and Contacts',
-          description:'Lead and Contact list in SFDC',
-          href: 'https://na55.salesforce.com/00v?fcf=00Bf1000004Mzip',
-          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/salesforce-logo-cloud.png'
+          subRoute: TechnicalDeepDive
+        },
+        {
+          subRoute: BusinessValueAssessment
+        },
+        {
+          subRoute: GoNoGo
+        },
+        {
+          subRoute: ProofOfConcept
+        },
+        {
+          subRoute: Close
         }
       ]
     };

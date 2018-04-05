@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'mdbreact';
 class DropdownPage extends React.Component {
   constructor(props) {
@@ -7,6 +8,12 @@ class DropdownPage extends React.Component {
     this.state = {
       dropdownOpen: false
     };
+
+    DropdownPage.propTypes = {
+      subItems: PropTypes.array.isRequired,
+      salesProcessIndex: PropTypes.number.isRequired,
+      handleSubNavClick: PropTypes.func.isRequired
+    }
   }
   toggle() {
     this.setState({
@@ -16,12 +23,12 @@ class DropdownPage extends React.Component {
   render() {
     return (<Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
       <DropdownToggle caret="caret" color="amber">
-        Deal Stage
+        {this.props.subItems[this.props.salesProcessIndex]}
       </DropdownToggle>
       <DropdownMenu>
         {
           this.props.subItems.map((subItem, index) =>
-          <DropdownItem key={index} color="black">
+          <DropdownItem key={index} color="black" onClick={() => this.props.handleSubNavClick(index)}>
             {subItem}
           </DropdownItem>)
         }
