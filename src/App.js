@@ -36,7 +36,7 @@ class App extends Component {
         name: 'Sales Process',
         route: SalesProcess,
         subContent: {
-          subContentOptions:['Discover','NBM','TDD', 'BVA', 'Go / No-Go', 'POC', 'Close' ]
+          subContentOptions:['Discovery','NBM','TDD', 'BVA', 'Go / No-Go', 'POC', 'Close' ]
         },
         isActive: false
       },
