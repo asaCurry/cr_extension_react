@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+import ContentCard from '../ContentCard';
 export default class Campaigns extends Component {
 
   constructor(props) {
@@ -48,45 +50,15 @@ export default class Campaigns extends Component {
       return (
         <div className="main-content-inner">
           <div className="content-container recentCampaigns">
-            <h2>Recent Campaigns</h2>
+            <h2>Recent Items</h2>
             {this.state.recentArray.map((content, index) =>
-              <div className="vertical flip-container"  key='index'>
-                <div className="vertical flipper">
-                  <a href={content.href} target="_blank" >
-                    <div className="contentItem front">
-                      <img src={content.imgSource} />
-                      <h3>{content.header}</h3>
-                      <p>{content.description}</p>
-                    </div>
-                  </a>
-                  <a href={content.href} target="_blank" >
-                    <div className="vertical contentItem back">
-                      <img src={content.imgSource} />
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <ContentCard content={content} cardKey={'recent' + index} />
             )}
           </div>
           <div className="content-container resources">
-            <h2>Ongoing Campaigns</h2>
+            <h2>Files and Folders</h2>
               {this.state.secondaryArray.map((content, index) =>
-                <div className="vertical flip-container"  key='index'>
-                  <div className="vertical flipper">
-                    <a href={content.href} target="_blank" >
-                      <div className="contentItem front">
-                        <img src={content.imgSource} />
-                        <h3>{content.header}</h3>
-                        <p>{content.description}</p>
-                      </div>
-                    </a>
-                    <a href={content.href} target="_blank" >
-                      <div className="vertical contentItem back">
-                        <img src={content.imgSource} />
-                      </div>
-                    </a>
-                  </div>
-                </div>
+              <ContentCard content={content} cardKey={'secondary' + index} />
               )}
           </div>
         </div>

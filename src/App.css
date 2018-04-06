@@ -177,7 +177,7 @@ p {
   height: 325px;
   margin-top: 0px;
   background-color: var();
-  box-shadow: inset 0px -20px 15px -18px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px -20px 15px -18px rgba(15, 15, 15, 0.8);
 }
 
 .content-container h2 {
@@ -185,28 +185,40 @@ p {
 }
 
 .content-container img {
-  width: auto;
-  height: 30px;
+  max-width: 50px;
+  height: auto;
   margin: 0px 0;
   margin-bottom: 8px;
+
 }
 
 .contentItem {
   background: linear-gradient(45deg, var(--main-color), #424242);
   margin: 8px 0 8px 0;
-  padding: 12px;
+  padding: 16px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   text-align: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .contentItem h3 {
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
 }
 
 .contentItem p {
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
+}
+
+/* alternative card styles */
+
+.cardCopy {
+  border-right: 2px solid #424242;
+  padding-right: 8px;
+  margin-right: 9px;
 }
 
 .contentItem .back {
@@ -219,7 +231,7 @@ p {
 }
 
 .back img {
-  height: 70px;
+  max-width: 80px;
 }
 
 .recentCampaigns {}
@@ -252,7 +264,7 @@ p {
 }
 
 .vertical.flip-container .flipper {
-  transform-origin: 100% 75px;
+  transform-origin: 100% 55px;
   /* half of height */
 }
 
@@ -266,7 +278,7 @@ p {
 
 .flip-container, .front, .back {
   width: 280px;
-  height: 130px;
+  height: 100px;
 }
 
 /* flip speed goes here */
