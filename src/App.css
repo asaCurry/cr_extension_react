@@ -54,7 +54,7 @@ p {
 
 .app-wrapper {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 160px 1fr;
   grid-template-rows: 1fr;
   min-height: 425px;
 }
@@ -189,7 +189,6 @@ p {
   height: auto;
   margin: 0px 0;
   margin-bottom: 8px;
-
 }
 
 .contentItem {
@@ -211,6 +210,52 @@ p {
 .contentItem p {
   font-size: 12px;
   text-align: left;
+}
+
+/****************/
+
+/** content specific *****/
+
+/* Employee Resources */
+
+.mainTabNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mainTabNav a {
+  padding: 12px 8px;
+  color: #FFF;
+  margin: 0px 4px;
+  background-color: var(--secondary-color);
+}
+
+.employee-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 60px);
+  width: 100%;
+  grid-row-gap: 24px;
+  grid-column-gap: 16px;
+}
+
+.resource-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, var(--main-color), #424242);
+  text-align: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.resource-item h3 {
+  font-size: 14px;
+}
+
+.resource-item p {
+  font-size: 12px;
 }
 
 /* alternative card styles */
