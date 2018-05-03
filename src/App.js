@@ -43,9 +43,6 @@ class App extends Component {
       {
         name: 'Employee Resources',
         route: EmployeeResources,
-        subContent: {
-          subContentOptions: ['Benefits', 'Sales Toos', 'Travel', 'Internal Tools', 'Social Media']
-        },
         isActive: false
       },
       {

@@ -232,12 +232,56 @@ p {
 }
 
 .employee-resources-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 60px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0px -20px 15px -18px rgba(15, 15, 15, 0.8);
+  overflow-y: scroll;
+  height: 325px;
+}
+
+.employee-resource-category {
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+.employee-resource-category h3 {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 300;
   width: 100%;
-  grid-row-gap: 24px;
-  grid-column-gap: 16px;
+}
+
+.employee-resource-item {
+  text-align: left;
+  color: #fff;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.employee-resource-item img {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+  text-align: center;
+}
+
+.employee-resource-item .fa-angle-double-right {
+  margin-left: 8px;
+  height: 8px;
+  margin-bottom: 2px;
+  color: var(--secondary-fade);
+}
+
+.employee-resource-item p:nth-of-type(2) {
+  color: var(--secondary-fade);
+  margin-left: 16px;
+}
+
+.employee-resource-item p:nth-of-type(1) {
+  color: var(--hightlight);
+  margin-left: 16px;
 }
 
 .resource-item {
