@@ -197,8 +197,8 @@ export default class EmployeeResources extends Component {
 
                   <div className="employee-resource-item" key={index + "-empResItem"}>
                     <img src={resourceItem.imgSource} />
-                      <p>{resourceItem.header} <i class="fas fa-angle-double-right fa-xs"></i></p>
-                    <p>{resourceItem.description}</p>
+                      <p>{resourceItem.header}</p>
+                    <p><span className="double-chev">&raquo;</span>{resourceItem.description}</p>
                   </div>
                 </a>
               )}

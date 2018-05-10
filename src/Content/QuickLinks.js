@@ -10,8 +10,8 @@ export default class QuickLinks extends Component {
       recentArray: [
         {
           header:'My Dashboard',
-          description:'Default lead dashboard in SFDC',
-          href: 'https://www.google.com',
+          description:'Easy access to your Leads, Accounts & Opportunities in Salesforce',
+          href: 'https://cybereason.my.salesforce.com/01Zf10000011SAC',
           imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/salesforce-logo-cloud.png'
         },
         {

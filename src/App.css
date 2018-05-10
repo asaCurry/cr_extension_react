@@ -31,7 +31,7 @@
 
 h2 {
   color: #fff;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 h3 {
@@ -42,6 +42,14 @@ h3 {
 p {
   margin: 0;
   color: #fff;
+}
+
+body {
+  margin: 0px !important;
+}
+
+a {
+  font-size: .8em;
 }
 
 /* end typestyles */
@@ -138,14 +146,16 @@ p {
   background-color: var(--secondary-color) !important;
   border-color: var(--secondary-color) !important;
   border-bottom: 2px solid #000 !important;
+  cursor: default !important;
 }
 
 .coming-soon a {
   color: #000;
+  cursor: default;
 }
 
 .coming-soon p {
-  color: var(--hightlight);
+  color: var(--highlight-active);
   font-size: 12px;
 }
 
@@ -307,7 +317,7 @@ p {
 
 .employee-resource-item p:nth-of-type(2) {
   color: var(--secondary-fade);
-  margin-left: 16px;
+  margin-left: 8px;
   transition: all .3s ease;
 }
 
@@ -315,6 +325,10 @@ p {
   color: var(--hightlight);
   margin-left: 16px;
   transition: all .3s ease;
+}
+
+.double-chev {
+  margin-right: 8px;
 }
 
 .employee-resource-item:hover p {
