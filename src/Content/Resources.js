@@ -12,8 +12,14 @@ export default class Resources extends Component {
       recentArray: [
         {
           header:'PPT Template',
-          description:'Starter template and slides for presentations',
-          href: 'https://cybereason.highspot.com/items/58c03f3ff3d806414afcb0ca#1',
+          description:'Up-to-Date Starter template and slides for presentations',
+          href: 'https://www.cybereason.com/hubfs/Chrome%20Extension/assets/2018_04_20_CR_Powerpoint_Template.potx',
+          imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
+        },
+        {
+          header:'PPT | Business Proposals',
+          description:'Business proposal deck for sales use',
+          href: 'https://www.cybereason.com/hubfs/Chrome%20Extension/assets/Cybereason%20Business%20Proposal_V1.6.pdf',
           imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
         },
         {
@@ -53,6 +59,18 @@ export default class Resources extends Component {
           description:'Competitive Selling Information on Crowdstrike',
           href: 'https://cybereason.highspot.com/items/5886594f60376b02ce78d455',
           imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Carbon-Black-Tag-RGB-full-color.png'
+        },
+        {
+          header:'Tanium Battlecard',
+          description:'Competitive Selling Information on Tanium',
+          href: 'https://cybereason.highspot.com/items/5aec4dd3af772d6be72c619b',
+          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Tanium_Logo_FullColor_Positive.png'
+        },
+        {
+          header:'SentinelOne Battlecard',
+          description:'Competitive Selling Information on SentinelOne',
+          href: 'https://cybereason.highspot.com/items/5aec4e01af772d7a6b508f74',
+          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/SentinelOne-Logo-TM-rgb.svg'
         }
       ]
     };
@@ -68,13 +86,13 @@ export default class Resources extends Component {
       return (
         <div className="main-content-inner">
           <div className="content-container recentCampaigns">
-            <h2>Recent Items</h2>
+            <h2>Files and folders</h2>
             {this.state.recentArray.map((content, index) =>
               <ContentCard content={content} cardKey={'recent' + index} />
             )}
           </div>
           <div className="content-container resources">
-            <h2>Files and Folders</h2>
+            <h2>Competitve Intel</h2>
               {this.state.secondaryArray.map((content, index) =>
               <ContentCard content={content} cardKey={'secondary' + index} />
               )}

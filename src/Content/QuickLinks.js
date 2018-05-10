@@ -44,7 +44,7 @@ export default class QuickLinks extends Component {
       return (
         <div className="main-content-inner">
           <div className="content-container recentCampaigns">
-            <h2>Recent Items</h2>
+            <h2>Leads and Accounts</h2>
             {this.state.recentArray.map((content, index) =>
               <ContentCard content={content} cardKey={'recent' + index} />
             )}

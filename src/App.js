@@ -33,22 +33,25 @@ class App extends Component {
         isActive: false
       },
       {
+        name: 'Employee Resources',
+        route: EmployeeResources,
+        isActive: false,
+        new: true
+      },
+      {
         name: 'Sales Process',
         route: SalesProcess,
+        comingSoon: true,
         subContent: {
           subContentOptions:['Discovery','NBM','TDD', 'BVA', 'Go / No-Go', 'POC', 'Close' ]
         },
         isActive: false
       },
       {
-        name: 'Employee Resources',
-        route: EmployeeResources,
-        isActive: false
-      },
-      {
-        name: 'Dingbats',
+        name: 'Tutorials',
         route: Wingbats,
-        isActive: false
+        isActive: false,
+        comingSoon: true
       }
     ]
   }

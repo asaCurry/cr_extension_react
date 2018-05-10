@@ -9,22 +9,16 @@ export default class Campaigns extends Component {
     this.state = {
       recentArray: [
         {
-          header:'Making or Breaking the CISO',
-          description:'A talk with Sam Curry',
-          href: 'https://na55.salesforce.com/701f1000001qjIX',
+          header:'How to Find Malicious Insiders',
+          description:'Tackling Insider Threats via Behavioral Indicators | April 26th',
+          href: 'https://cybereason.my.salesforce.com/701f1000001l79r',
+          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/salesforce-logo-cloud.png'
+        },
+        {
+          header:'Catch Me if You Can: Pentesting vs. APTs',
+          description:'Cybereason Webinar | May 8th',
+          href: 'https://cybereason.my.salesforce.com/701f1000001l7LJ',
           imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/salesforce-logo-cloud.png'
-        },
-        {
-          header:'SOC Talk: Ransomware Mythbusting',
-          description:'A discussion of common ransomware misconceptions',
-          href: 'https://cybereason.my.salesforce.com/701f1000001o7fE',
-          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/salesforce-logo-cloud.png'
-        },
-        {
-          header:'CISOs and the Board',
-          description:'How CISOs can better interact with the board and other C-levels',
-          href: 'https://na55.salesforce.com/701f1000001qiI4',
-          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/salesforce-logo-cloud.png'
         }
       ],
       secondaryArray: [
@@ -50,7 +44,7 @@ export default class Campaigns extends Component {
       return (
         <div className="main-content-inner">
           <div className="content-container recentCampaigns">
-            <h2>Recent Items</h2>
+            <h2>Recent Campaigns</h2>
             {this.state.recentArray.map((content, index) =>
               <ContentCard content={content} cardKey={'recent' + index} />
             )}

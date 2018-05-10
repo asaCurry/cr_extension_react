@@ -1,19 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-
-const Navigation = props =>
-  <ul>
-     {props.navItems.map((item, index) =>
-
-      <li key={index}
-        className={(item.isActive ? 'nav-select' : '')}
-        onClick={() => props.handleNavClick(index) }
-        >
-        <a>{item.name}</a>
-      </li>
-    )}
-  </ul>;
+export default class Navigation extends Component {
+constructor(props) {
+  super(props);
 
   Navigation.propTypes = {
     navItems: PropTypes.array.isRequired,
@@ -21,4 +11,45 @@ const Navigation = props =>
     handleCurrentIndex: PropTypes.func.isRequired
   }
 
-  export default Navigation
+}
+
+render() {
+
+  return (
+      <ul>
+         {this.props.navItems.map((item, index) => {
+           if (item.comingSoon !== undefined ) {
+             return (
+               <li key={index + 'navIndex'}
+                 className="coming-soon"
+                 >
+                 <a>{item.name}</a>
+                 <p>Coming Soon</p>
+               </li>
+             );
+          } else if ( item.new  ) {
+            return (
+              <li key={index + 'navIndex'}
+                className={(item.isActive ? 'nav-select new-nav' : 'new-nav')}
+                onClick={() => this.props.handleNavClick(index) }
+                >
+                <a>{item.name}</a>
+                <p >New!</p>
+              </li>
+            );
+           } else {
+             return (
+               <li key={index + 'navIndex'}
+                 className={(item.isActive ? 'nav-select' : '')}
+                 onClick={() => this.props.handleNavClick(index) }
+                 >
+                 <a>{item.name}</a>
+               </li>
+             );
+           }
+         }
+        )}
+      </ul>
+    );
+  }
+}
