@@ -18,7 +18,7 @@ render() {
   return (
       <ul>
          {this.props.navItems.map((item, index) => {
-           if (item.comingSoon !== undefined ) {
+           if (item.comingSoon  ) {
              return (
                <li key={index + 'navIndex'}
                  className="coming-soon"

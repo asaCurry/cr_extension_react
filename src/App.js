@@ -9,7 +9,7 @@ import Resources from './Content/Resources';
 import Campaigns from './Content/Campaigns';
 import EmployeeResources from './Content/EmployeeResources';
 import SalesProcess from './Content/SalesProcess';
-import Wingbats from './Content/Wingbats';
+import Tutorials from './Content/Tutorials';
 
 class App extends Component {
 
@@ -39,6 +39,13 @@ class App extends Component {
         new: true
       },
       {
+        name: 'Tutorials',
+        route: Tutorials,
+        isActive: false,
+        comingSoon: false,
+        new: true
+      },
+      {
         name: 'Sales Process',
         route: SalesProcess,
         comingSoon: true,
@@ -46,12 +53,6 @@ class App extends Component {
           subContentOptions:['Discovery','NBM','TDD', 'BVA', 'Go / No-Go', 'POC', 'Close' ]
         },
         isActive: false
-      },
-      {
-        name: 'Tutorials',
-        route: Wingbats,
-        isActive: false,
-        comingSoon: true
       }
     ]
   }

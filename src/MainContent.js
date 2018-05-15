@@ -8,7 +8,7 @@ import Resources from './Content/Resources';
 import Campaigns from './Content/Campaigns';
 import EmployeeResources from './Content/EmployeeResources';
 import SalesProcess from './Content/SalesProcess';
-import Wingbats from './Content/Wingbats';
+import Tutorials from './Content/Tutorials';
 
 export default class MainContent extends Component {
 

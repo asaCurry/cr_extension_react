@@ -14,13 +14,13 @@ export default class Resources extends Component {
           header:'PPT Template',
           description:'Up-to-Date Starter template and slides for presentations',
           href: 'https://www.cybereason.com/hubfs/Chrome%20Extension/assets/2018_04_20_CR_Powerpoint_Template.potx',
-          imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
+          imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/2000px-Microsoft_PowerPoint_2013_logo.svg.png'
         },
         {
           header:'PPT | Business Proposals',
           description:'Business proposal deck for sales use',
           href: 'https://www.cybereason.com/hubfs/Chrome%20Extension/assets/Cybereason%20Business%20Proposal_V1.6.pdf',
-          imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
+          imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/2000px-Microsoft_PowerPoint_2013_logo.svg.png'
         },
         {
           header:'SKO Materials',
@@ -33,6 +33,12 @@ export default class Resources extends Component {
           description:'Case studies listings on cybereason.com',
           href: 'https://www.cybereason.com/insights/tag/case-study',
           imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/697037-youtube-512.png'
+        },
+        {
+          header:'Extension Static Link',
+          description:'Link to share with others to download the Extension',
+          href: 'https://chrome.google.com/webstore/detail/cybereason-resources-exte/abohglopajmdbaaoojikmpmjaocbephg?authuser=1',
+          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
         },
         {
           header:'Cybereason Blog',
@@ -69,8 +75,14 @@ export default class Resources extends Component {
         {
           header:'SentinelOne Battlecard',
           description:'Competitive Selling Information on SentinelOne',
-          href: 'https://cybereason.highspot.com/items/5aec4e01af772d7a6b508f74',
+          href: 'https://cybereason.highspot.com/items/5af57f9d3e255f66d9fae063?lfrm=urec.4',
           imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/SentinelOne-Logo-TM-rgb.svg'
+        },
+        {
+          header:'Microsoft Battlecard',
+          description:'Competitive Selling Information on SentinelOne',
+          href: 'https://cybereason.highspot.com/items/5aec4e01af772d7a6b508f74',
+          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/2000px-Microsoft_logo_(2012).svg.png'
         }
       ]
     };

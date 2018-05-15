@@ -175,7 +175,7 @@ export default class EmployeeResources extends Component {
               header:'Youtube',
               description:'Cybereason on Youtube',
               href: 'https://www.youtube.com/channel/UCOm7AaB0HiNH4Phe66sK0Ew',
-              imgSource: 'https://pbs.twimg.com/profile_images/981993448432644096/wc7SUBZT_400x400.jpg'
+              imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/697037-youtube-512.png'
             }
           ]
         }
