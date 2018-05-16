@@ -193,7 +193,7 @@ export default class EmployeeResources extends Component {
               <div className="employee-resource-category" key={index + "-empResCat"}>
               <h3>{content.resourceCategory}</h3>
               {content.resourceItems.map( (resourceItem, index) =>
-                <a href={resourceItem.href}>
+                <a href={resourceItem.href} target="_blank">
 
                   <div className="employee-resource-item" key={index + "-empResItem"}>
                     <img src={resourceItem.imgSource} />

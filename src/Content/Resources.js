@@ -100,13 +100,13 @@ export default class Resources extends Component {
           <div className="content-container recentCampaigns">
             <h2>Files and folders</h2>
             {this.state.recentArray.map((content, index) =>
-              <ContentCard content={content} cardKey={'recent' + index} />
+              <ContentCard content={content} key={'recent' + index} />
             )}
           </div>
           <div className="content-container resources">
             <h2>Competitve Intel</h2>
               {this.state.secondaryArray.map((content, index) =>
-              <ContentCard content={content} cardKey={'secondary' + index} />
+              <ContentCard content={content} key={'secondary' + index} />
               )}
           </div>
         </div>

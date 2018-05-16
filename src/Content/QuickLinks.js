@@ -46,13 +46,13 @@ export default class QuickLinks extends Component {
           <div className="content-container recentCampaigns">
             <h2>Leads and Accounts</h2>
             {this.state.recentArray.map((content, index) =>
-              <ContentCard content={content} cardKey={'recent' + index} />
+              <ContentCard content={content} key={'recent' + index} />
             )}
           </div>
           <div className="content-container resources">
             <h2>Files and Folders</h2>
               {this.state.secondaryArray.map((content, index) =>
-              <ContentCard content={content} cardKey={'secondary' + index} />
+              <ContentCard content={content} key={'secondary' + index} />
               )}
           </div>
         </div>

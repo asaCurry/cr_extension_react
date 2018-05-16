@@ -47,7 +47,7 @@ export default class Tutorials extends Component {
           }
             <option value="more" disabled>More Coming Soon!</option>
           </select>
-          <iframe width="500" height="300" src={this.state.loomLinks[this.state.tutorialIndex].tutorialEmbedCode} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe width="500" height="300" title={this.state.loomLinks.tutorialName} src={this.state.loomLinks[this.state.tutorialIndex].tutorialEmbedCode} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
           </div>
         </div>

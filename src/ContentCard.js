@@ -21,12 +21,12 @@ export default class ContentCard extends Component {
                         <h3>{this.props.content.header}</h3>
                         <p>{this.props.content.description}</p>
                       </div>
-                      <img src={this.props.content.imgSource} />
+                      <img alt={this.props.content.header} src={this.props.content.imgSource} />
                     </div>
                   </a>
                   <a href={this.props.content.href} target="_blank" >
                     <div className="vertical contentItem back">
-                      <img src={this.props.content.imgSource} />
+                      <img alt={this.props.content.header} src={this.props.content.imgSource} />
                     </div>
                   </a>
                 </div>

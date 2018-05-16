@@ -23,7 +23,7 @@ class App extends Component {
         isActive: true
       },
       {
-        name: 'Resources',
+        name: 'Sales Resources',
         route: Resources,
         isActive: false
       },
@@ -33,7 +33,7 @@ class App extends Component {
         isActive: false
       },
       {
-        name: 'Employee Resources',
+        name: 'HR Resources',
         route: EmployeeResources,
         isActive: false,
         new: true
