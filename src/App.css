@@ -300,11 +300,12 @@ a {
   border-top: 1px solid var(--secondary-fade);
   margin-top: 3px;
   transition: all .3s ease;
+  min-width: 500px;
 }
 
 .employee-resource-item img {
   height: 20px;
-  width: auto;
+  max-width: 100px;
   margin-right: 8px;
   text-align: center;
   margin-top: 3px;
@@ -368,9 +369,11 @@ a {
   background-size: 100px;
   background-repeat: no-repeat;
 }
+
 .tutorial-wrapper select {
   margin-bottom: 6px;
 }
+
 .tutorial-wrapper li {
   text-decoration: none;
 }
@@ -380,6 +383,7 @@ a {
   border: none;
   padding: 4px 6px;
 }
+
 .tutorial-wrapper iframe {
   background-color: var(--secondary-color);
   background-image: url("https://www.cybereason.com/hubfs/playbutton.png");
@@ -387,12 +391,14 @@ a {
   background-size: 100px;
   background-repeat: no-repeat;
 }
+
 /* alternative card styles */
 
 .cardCopy {
   border-right: 2px solid #424242;
   padding-right: 8px;
   margin-right: 9px;
+  min-width: 150px;
 }
 
 .contentItem .back {

@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import ContentSelector from './contentSelector';
 import DropdownPage from './contentSelectorMB';
 
-import QuickLinks from './Content/QuickLinks';
-import Resources from './Content/Resources';
-import Campaigns from './Content/Campaigns';
-import EmployeeResources from './Content/EmployeeResources';
-import SalesProcess from './Content/SalesProcess';
-import Tutorials from './Content/Tutorials';
+import Sales from './Content/Sales';
+import Marketing from './Content/Marketing';
+import General from './Content/General';
+import PeopleOps from './Content/PeopleOps';
+import Product from './Content/Product';
 
 export default class MainContent extends Component {
 
@@ -53,7 +52,7 @@ render(){
             }
           )}
         </div>
-        <RenderMe navItems={this.props.navItems} salesProcessIndex={this.props.salesProcessIndex}/>
+        <RenderMe navItems={this.props.navItems} salesProcessIndex={this.props.salesProcessIndex} />
       </div>
     );
   }

@@ -4,12 +4,11 @@ import './App.css';
 import Navigation from './navigation';
 import MainContent from './MainContent';
 
-import QuickLinks from './Content/QuickLinks';
-import Resources from './Content/Resources';
-import Campaigns from './Content/Campaigns';
-import EmployeeResources from './Content/EmployeeResources';
-import SalesProcess from './Content/SalesProcess';
-import Tutorials from './Content/Tutorials';
+import Product from './Content/Product';
+import Sales from './Content/Sales';
+import Marketing from './Content/Marketing';
+import General from './Content/General';
+import PeopleOps from './Content/PeopleOps';
 
 class App extends Component {
 
@@ -18,41 +17,30 @@ class App extends Component {
     salesProcessIndex:0,
     navItems: [
       {
-        name: 'Quick Links',
-        route: QuickLinks,
+        name: 'General',
+        route: General,
         isActive: true
       },
       {
-        name: 'Sales Resources',
-        route: Resources,
+        name: 'Sales',
+        route: Sales,
         isActive: false
       },
       {
-        name: 'Campaigns',
-        route: Campaigns,
+        name: 'Marketing',
+        route: Marketing,
         isActive: false
       },
       {
-        name: 'HR Resources',
-        route: EmployeeResources,
+        name: 'Product',
+        route: Product,
+        isActive: false
+      },
+      {
+        name: 'People Ops',
+        route: PeopleOps,
         isActive: false,
-        new: true
-      },
-      {
-        name: 'Tutorials',
-        route: Tutorials,
-        isActive: false,
-        comingSoon: false,
-        new: true
-      },
-      {
-        name: 'Sales Process',
-        route: SalesProcess,
-        comingSoon: true,
-        subContent: {
-          subContentOptions:['Discovery','NBM','TDD', 'BVA', 'Go / No-Go', 'POC', 'Close' ]
-        },
-        isActive: false
+        comingSoon: false
       }
     ]
   }

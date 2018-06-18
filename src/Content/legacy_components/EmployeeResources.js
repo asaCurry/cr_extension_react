@@ -79,7 +79,7 @@ export default class EmployeeResources extends Component {
             },
             {
               header:'HighSpot',
-              description:'Sales Documents',
+              description:'Sales and Marketing Documents',
               href: 'https://cybereason.highspot.com',
               imgSource: 'https://pbs.twimg.com/profile_images/776162171331809280/-YnsVptl_400x400.jpg'
             },
