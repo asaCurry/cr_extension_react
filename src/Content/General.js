@@ -14,6 +14,18 @@ export default class General extends Component {
           resourceCategory:'Useful Links',
           resourceItems: [
             {
+              header:'Cybereason Org Chart',
+              description:'Up-to-date internal org chart',
+              href: 'https://app.pingboard.com/s/5Y6j4rujmm0YiTGI6z8UTKgnzOBxcGe2wrKS67QY5xbzgC9rwdloLpz0WTPWB1z9seQhZfs8qHclRT4oB9PZfw/org_chart',
+              imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
+            },
+            {
+              header:'Global Calendar',
+              description:'Global Calendar of Cybereason Events and Holidays',
+              href: 'https://calendar.google.com/calendar/embed?src=cybereason.com_69qd4vh9n0h5frsbc7sb1i63d8%40group.calendar.google.com&ctz=America%2FNew_York',
+              imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/calendar-512.png'
+            },
+            {
               header:'Salesforce',
               description:'CRM',
               href: 'https://cybereason.my.salesforce.com',
@@ -59,18 +71,12 @@ export default class General extends Component {
               header:'Logos',
               description:'Branding Guidelines and Logo Assets',
               href: 'https://cybereason.atlassian.net/wiki/spaces/MKTG/pages/110376232/Style+Guidelines',
-              imgSource:'https://pbs.twimg.com/profile_images/907269120823103488/7BShure2_400x400.jpg'
-            },
-            {
-              header:'HighSpot',
-              description:'Sales Documents',
-              href: 'https://cybereason.highspot.com',
-              imgSource: 'https://pbs.twimg.com/profile_images/776162171331809280/-YnsVptl_400x400.jpg'
+              imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
             },
             {
               header:'Slack',
               description:'Internal Messaging App',
-              href: 'https://cybereason.slack.com/messages',
+              href: 'https://cybereason.slack.com/team',
               imgSource: 'https://pbs.twimg.com/profile_images/885554951857946624/sd7GRyjY_400x400.jpg'
             }
           ]

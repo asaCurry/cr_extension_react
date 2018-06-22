@@ -9,38 +9,36 @@ export default class Product extends Component {
 
 
     this.state = {
-      recentArray: [
+      employeeResources: [
+
         {
-          header:'17.6 Release Video',
-          description:"What's New in cybereason 17.6",
-          href: 'https://cybereason.tahoe.appsembler.com/dashboard',
-          imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
-        },
-        {
-          header:'Cybereason Academy',
-          description:'Customer Training Portal',
-          href: 'https://cybereason.tahoe.appsembler.com/dashboard',
-          imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
-        },
-        {
-          header:'Cybereason Documentation',
-          description:'Library of Cybereason Product Documentation',
-          href: 'https://docs.cybereason.com',
-          imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
-        },
-        {
-          header:'Unity Design Portal',
-          description:'In-House product design website',
-          href: 'http://unity.cybereason.net/intro',
-          imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
-        }
-      ],
-      secondaryArray: [
-        {
-          header:'Jira',
-          description:'Product management',
-          href: 'https://jira.atlassian.com/secure/Dashboard.jspa',
-          imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
+          resourceCategory:'Product Resources',
+          resourceItems: [
+            {
+              header:'Jira',
+              description:'Product management',
+              href: 'https://jira.atlassian.com/secure/Dashboard.jspa',
+              imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
+            },
+            {
+              header:'17.6 Release Video',
+              description:"What's New in cybereason 17.6",
+              href: 'https://cybereason.tahoe.appsembler.com/dashboard',
+              imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
+            },
+            {
+              header:'Cybereason Academy',
+              description:'Customer Training Portal',
+              href: 'https://cybereason.tahoe.appsembler.com/dashboard',
+              imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
+            },
+            {
+              header:'Cybereason Documentation',
+              description:'Library of Cybereason Product Documentation',
+              href: 'https://docs.cybereason.com',
+              imgSource:'https://www.cybereason.com/hubfs/Email%20Images/email-logo-64.png'
+            }
+          ]
         }
       ]
     };
@@ -55,19 +53,24 @@ export default class Product extends Component {
       }
       return (
         <div className="main-content-inner">
-          <div className="content-container recentCampaigns">
-            <h2>Project Management</h2>
-            {this.state.recentArray.map((content, index) =>
-              <ContentCard content={content} key={'recent' + index} />
+          <div className="employee-resources-grid">
+            {this.state.employeeResources.map((content, index) =>
+              <div className="employee-resource-category" key={index + "-empResCat"}>
+              <h3>{content.resourceCategory}</h3>
+              {content.resourceItems.map( (resourceItem, index) =>
+                <a href={resourceItem.href} target="_blank">
+
+                  <div className="employee-resource-item" key={index + "-empResItem"}>
+                    <img src={resourceItem.imgSource} />
+                      <p>{resourceItem.header}</p>
+                    <p><span className="double-chev">&raquo;</span>{resourceItem.description}</p>
+                  </div>
+                </a>
+              )}
+              </div>
             )}
           </div>
-          <div className="content-container resources">
-            <h2>Documentation</h2>
-              {this.state.secondaryArray.map((content, index) =>
-              <ContentCard content={content} key={'secondary' + index} />
-              )}
-          </div>
         </div>
-    );
+);
   }
 }
