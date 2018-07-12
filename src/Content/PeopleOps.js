@@ -23,7 +23,7 @@ export default class PeopleOps extends Component {
               header:'People Ops Wiki',
               description:'Overview of People Ops',
               href: 'https://cybereason.atlassian.net/wiki/spaces/PO/overview',
-              imgSource: 'https://pbs.twimg.com/profile_images/907269120823103488/7BShure2_400x400.jpg'
+              imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/atlassian_icon.png'
             }
           ]
         },
@@ -77,7 +77,7 @@ export default class PeopleOps extends Component {
               description:'Eye Insurance',
               href: 'https://www.vsp.com/',
               imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/vsp_logo.jpg'
-            }          
+            }
           ]
         },
         {
@@ -104,7 +104,7 @@ export default class PeopleOps extends Component {
     }
   }
     render () {
-      var competitiveStyle = {
+      let competitiveStyle = {
         marginBottom: '8px',
         maxHeight: '30px'
       }

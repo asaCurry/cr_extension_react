@@ -18,7 +18,7 @@ export default class Product extends Component {
               header:'Jira',
               description:'Product management',
               href: 'https://jira.atlassian.com/secure/Dashboard.jspa',
-              imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
+              imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/jira_icon.ico'
             },
             {
               header:'17.6 Release Video',

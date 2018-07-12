@@ -112,13 +112,13 @@ export default class Sales extends Component {
               header:'Outreach.io',
               description:'Email templates: Inside Sales',
               href: 'https://accounts.outreach.io/users/sign_in',
-              imgSource:'https://pbs.twimg.com/profile_images/861986015359127552/ENp5_d7w_400x400.jpg'
+              imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/outreach_icon.jpg'
             },
             {
               header:'Owler',
               description:'Competitive Intelligence',
               href: 'https://www.owler.com/home',
-              imgSource: 'https://pbs.twimg.com/profile_images/867423013205135360/ue4TUyTK_400x400.jpg'
+              imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/owler_icon.png'
             },
             {
               header:'LeadLander',

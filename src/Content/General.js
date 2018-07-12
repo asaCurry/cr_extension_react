@@ -39,7 +39,7 @@ export default class General extends Component {
             },
             {
               header:'Google Drive',
-              description:'Benefits',
+              description:'Cloud Storage',
               href: 'https://drive.google.com',
               imgSource: 'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/Google-Drive-icon.png'
             },
@@ -65,7 +65,7 @@ export default class General extends Component {
               header:'Confluence',
               description:'Company Wiki/Intranet',
               href: 'https://cybereason.atlassian.net/wiki/discover/popular',
-              imgSource:'https://pbs.twimg.com/profile_images/907269120823103488/7BShure2_400x400.jpg'
+              imgSource:'https://www.cybereason.com/hubfs/Chrome%20Extension/button%20backgrounds/atlassian_icon.png'
             },
             {
               header:'Logos',
